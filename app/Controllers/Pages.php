@@ -27,6 +27,7 @@ class Pages extends BaseController
         if (! $this->validate([
             'title' => 'required|min_length[5]', //validation rules
             'body' => 'required|min_length[5]',
+            'subtitle' => 'required|min_length[5]'
         ],
 
         //Custom error messages
@@ -37,6 +38,10 @@ class Pages extends BaseController
         'body' => [
             'required' => 'The post body is required',
             'min_length'=> 'Minimum 5 charecters are required for post body'
+        ],
+        'subtitle' => [
+            'required' => 'The post subtitle is required',
+            'min_length'=> 'Minimum 5 charecters are required for post subtitle'
         ]
         ])) {
             return view('pages/post', [
