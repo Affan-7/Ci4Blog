@@ -60,4 +60,12 @@ class Pages extends BaseController
         $data['success'] = true;
         return view('pages/home', $data);
     }
+
+    public function showPost($postName)
+    {
+        $model1 = new PostsModel();
+        $data['post'] = $model1->getPost($postName);
+
+        echo view('pages/showpost', $data);
+    }
 }

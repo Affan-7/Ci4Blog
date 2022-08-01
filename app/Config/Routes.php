@@ -39,6 +39,7 @@ $routes->get('/', 'Pages::index');
 $routes->get('/about', 'Pages::about');
 $routes->get('/post', 'Pages::post');
 $routes->post('/post', 'Pages::newPost');
+$routes->get('/posts/(:segment)', 'Pages::showPost/$1');
 
 /*
  * --------------------------------------------------------------------

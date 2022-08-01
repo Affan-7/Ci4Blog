@@ -36,4 +36,10 @@ class PostsModel extends Model
         $posts = $this->findAll();
         return $posts;
     }
+
+    public function getPost($postName)
+    {
+        $post = $this->where('title', $postName)->find();
+        return $post;
+    }
 }
