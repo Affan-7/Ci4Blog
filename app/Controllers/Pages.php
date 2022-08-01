@@ -23,14 +23,27 @@ class Pages extends BaseController
     {
         helper('form');
 
-        $rules = [];
+        if (! $this->validate([
+            'title' => 'required|min_length[5]', //validation rules
+            'body' => 'required|min_length[5]',
+        ],
 
-        if (! $this->validate($rules)) {
-            return view('signup', [
+        //Custom error messages
+        ['title' => [
+            'required' => 'The post title is required',
+            'min_length'=> 'Minimum 5 charecters are required for post title'
+        ],
+        'body' => [
+            'required' => 'The post body is required',
+            'min_length'=> 'Minimum 5 charecters are required for post body'
+        ]
+        ])) {
+            return view('pages/post', [
                 'validation' => $this->validator,
             ]);
-        }else{
-            redirect('/');
         }
+
+        return view('pages/home');
     }
+    
 }

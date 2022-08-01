@@ -1,5 +1,11 @@
 <?= view("templates/header") ?>
 
+<?php if(isset($validation)) : ?>
+	<div class="text-danger">
+	<?= $validation->listErrors() ?>
+	</div>
+<?php endif; ?>
+
 <div class="container mt-5">
 	<form action="/post" method="post">
 		<div class="mb-3">
