@@ -7,7 +7,7 @@
                 $date = date('d M Y');
                 echo $date;
             ?></p>
-        <p><?= $post[0]['body'] ?></p>
+        <p><?= $post = preg_replace("/\r\n|\r|\n/", '<br/>', $post[0]['body']); ?></p>
 </div>
 
 <?= view("templates/footer") ?>
