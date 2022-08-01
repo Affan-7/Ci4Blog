@@ -21,6 +21,7 @@ class Pages extends BaseController
 
     public function newPost()
     {
+        $data = [];
         helper('form');
 
         if (! $this->validate([
@@ -43,7 +44,8 @@ class Pages extends BaseController
             ]);
         }
 
-        return view('pages/home');
+        $data['success'] = true;
+        return view('pages/home', $data);
     }
     
 }
