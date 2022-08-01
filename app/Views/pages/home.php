@@ -20,4 +20,17 @@
 	</div>
 </div>
 
+<?php if(isset($posts)) : ?>
+	<?php foreach($posts as $post) : ?>
+		<div class="container mt-4 card card-body text-bg-light">
+			<a href="#" class="text-dark" style="text-decoration: none;"><h2><?= $post['title'] ?></h2></a>
+			<a href="#" class="text-dark" style="text-decoration: none;"><h5 class="text-muted"><?= $post['subtitle'] ?></h5></a>
+			<p class="text-muted"><?php $date = $post['created_at'];
+					$date = date('d M Y');
+					echo $date;
+				?></p>
+	</div>
+		<?php endforeach; ?>
+	<?php endif; ?>
+
 <?= view("templates/footer") ?>

@@ -8,7 +8,10 @@ class Pages extends BaseController
 {
     public function index()
     {
-        echo view('pages/home');
+        $model1 = new PostsModel();
+        $data['posts'] = $model1->getPosts();
+
+        echo view('pages/home', $data);
     }
     
     public function about()
