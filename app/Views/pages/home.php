@@ -1,3 +1,5 @@
+<?= view("templates/header") ?>
+
 <div class="h-100 p-5 border" style="background-color: #e9ecef;"> <!-- Jumbotron was discontinued from bootstrap5 that's why I created this -->
 	<div class="container">
 				<h1 style="font-family: 'Work Sans';">Ci4 Blog!</h1>
@@ -7,3 +9,5 @@
 				<button class="btn btn-outline-secondary" type="button">Learn more</button>
 	</div>
 </div>
+
+<?= view("templates/footer") ?>
