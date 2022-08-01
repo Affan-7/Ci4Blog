@@ -30,7 +30,7 @@ class Pages extends BaseController
         helper('form');
 
         if (! $this->validate([
-            'title' => 'required|min_length[5]', //validation rules
+            'title' => 'required|min_length[5]|is_unique[posts.title]', //validation rules
             'body' => 'required|min_length[5]',
             'subtitle' => 'required|min_length[5]'
         ],
@@ -38,7 +38,8 @@ class Pages extends BaseController
         //Custom error messages
         ['title' => [
             'required' => 'The post title is required',
-            'min_length'=> 'Minimum 5 charecters are required for post title'
+            'min_length'=> 'Minimum 5 charecters are required for post title',
+            'is_unique' => 'A post with this post title already exists'
         ],
         'body' => [
             'required' => 'The post body is required',
