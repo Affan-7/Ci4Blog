@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\PostsModel;
+
 class Pages extends BaseController
 {
     public function index()
@@ -49,8 +51,10 @@ class Pages extends BaseController
             ]);
         }
 
+        $model1 = new PostsModel();
+        $model1->newPost($_POST);
+
         $data['success'] = true;
         return view('pages/home', $data);
     }
-    
 }
