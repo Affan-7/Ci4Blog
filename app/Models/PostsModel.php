@@ -30,4 +30,10 @@ class PostsModel extends Model
         $this->allowedFields = ['title', 'subtitle', 'body'];
         $this->insert($data);
     }
+
+    public function getPosts()
+    {
+        $posts = $this->findAll();
+        return $posts;
+    }
 }
