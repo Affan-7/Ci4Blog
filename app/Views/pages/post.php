@@ -13,6 +13,10 @@
 			<input type="text" class="form-control" name="title" id="blog-title" aria-describedby="emailHelp">
 		</div>
 		<div class="mb-3">
+			<label for="blog-subtitle" class="form-label">Post subtitle</label>
+			<input type="text" class="form-control" name="subtitle" id="blog-subtitle" aria-describedby="emailHelp">
+		</div>
+		<div class="mb-3">
 			<label for="blog-body" class="form-label">Post body</label>
 			<textarea class="form-control" name="body" id="blog-body" rows="14"></textarea>
 		</div>
