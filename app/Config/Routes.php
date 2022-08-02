@@ -42,6 +42,7 @@ $routes->post('/post', 'Pages::newPost');
 $routes->get('/posts/(:segment)', 'Pages::showPost/$1');
 $routes->get('/login', 'Users::login');
 $routes->get('/register', 'Users::register');
+$routes->post('/register', 'Users::registerUser');
 
 /*
  * --------------------------------------------------------------------

@@ -2,39 +2,44 @@
 
 <div class="container mt-5">
 	<div class="row">
-		<form class="col-fluid col-sm-8 m-auto border rounded-4 p-5 pt-5 d-felx">
+		<form class="col-fluid col-sm-8 m-auto border rounded-4 p-5 pt-5 d-felx" action="/register" method="post">
 		<div class="text-center">
 			<h1 class="p-2">Ci4 Blog</h1>
 		</div>
 		<h3 class="text-center mb-4">Register</h3>
         <div class="row">
 			<div class="col form-floating mb-4">
-				<input type="text" class="form-control" id="floatingFirstName" placeholder="First name">
+				<input name="firstName" type="text" class="form-control" id="floatingFirstName" placeholder="First name">
 				<label for="floatingFirstName" style="margin-left: 0.8rem;">First name</label>
 			</div>
 			<div class="col form-floating mb-4">
-				<input type="text" class="form-control" id="floatingLastName" placeholder="Last name">
+				<input name="lastName" type="text" class="form-control" id="floatingLastName" placeholder="Last name">
 				<label for="floatingLastName" style="margin-left: 0.8rem;">Last name</label>
 			</div>
         </div>
 		<div class="row">
 			<div class="col">
 				<div class="form-floating mb-4">
-				<input type="email" class="form-control" id="floatingInput" placeholder="Email address">
+				<input name="email" type="email" class="form-control" id="floatingInput" placeholder="Email address">
 				<label for="floatingInput">Email address</label>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col form-floating mb-4">
-				<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+				<input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
 				<label for="floatingPassword" style="margin-left: 0.8rem;">Password</label>
 			</div>
 			<div class="col form-floating mb-4">
-				<input type="password" class="form-control" id="floatingConfirm" placeholder="Confirm password">
+				<input name="confirmPassword" type="password" class="form-control" id="floatingConfirm" placeholder="Confirm password">
 				<label for="floatingConfirm" style="margin-left: 0.8rem;">Confirm password</label>
 			</div>
-        </div>
+    </div>
+				<?php if(isset($validation)) : ?>
+					<div class="text-danger">
+						<?= $validation->listErrors() ?>
+					</div>
+				<?php endif; ?>
 			<button type="submit" class="btn btn-primary">Register</button>
 			<a style="float: right;" href="/login">Already have an account?</a>
 		</form>
