@@ -36,7 +36,7 @@
 			</div>
     </div>
 				<?php if(isset($validation)) : ?>
-					<div class="text-danger">
+					<div class="alert alert-danger text-danger">
 						<?= $validation->listErrors() ?>
 					</div>
 				<?php endif; ?>

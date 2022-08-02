@@ -1,8 +1,9 @@
 <?= view("templates/header") ?>
 
 <?php if(isset($validation)) : ?>
-	<div class="text-danger">
+	<div class="container alert alert-danger text-danger alert-dismissible fade show">
 	<?= $validation->listErrors() ?>
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
 <?php endif; ?>
 
