@@ -9,11 +9,11 @@
 		<h3 class="text-center mb-4">Register</h3>
         <div class="row">
 			<div class="col form-floating mb-4">
-				<input name="firstName" type="text" class="form-control" id="floatingFirstName" placeholder="First name">
+				<input name="first_name" type="text" class="form-control" id="floatingFirstName" placeholder="First name">
 				<label for="floatingFirstName" style="margin-left: 0.8rem;">First name</label>
 			</div>
 			<div class="col form-floating mb-4">
-				<input name="lastName" type="text" class="form-control" id="floatingLastName" placeholder="Last name">
+				<input name="last_name" type="text" class="form-control" id="floatingLastName" placeholder="Last name">
 				<label for="floatingLastName" style="margin-left: 0.8rem;">Last name</label>
 			</div>
         </div>
