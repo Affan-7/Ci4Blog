@@ -59,6 +59,8 @@ class Pages extends BaseController
         $model1->newPost($_POST);
 
         $data['success'] = true;
+        $data['posts'] = $model1->getPosts();
+        
         return view('pages/home', $data);
     }
 
