@@ -14,7 +14,7 @@ class PostsModel extends Model
     protected $returnType     = 'array';
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['title'];
+    protected $allowedFields = [];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
