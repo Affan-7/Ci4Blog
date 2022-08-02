@@ -25,8 +25,18 @@ class UsersModel extends Model
     // protected $validationMessages = [];
     // protected $skipValidation     = false;
 
+    protected $beforeInsert = ['hashPassword'];
+    protected $beforeUpdate = ['hashPassword'];
+
     public function registerUser($data){
         $this->allowedFields = ['first_name','last_name','password', 'email'];
         $this->insert($data);
+    }
+
+    protected function hashPassword($data){
+        if (isset($data['data']['password'])){
+        $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+        }
+        return $data;
     }
 }
