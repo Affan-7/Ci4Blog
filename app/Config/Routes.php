@@ -40,6 +40,7 @@ $routes->get('/about', 'Pages::about');
 $routes->get('/post', 'Pages::post');
 $routes->post('/post', 'Pages::newPost');
 $routes->get('/posts/(:segment)', 'Pages::showPost/$1');
+$routes->get('/login', 'Users::login');
 
 /*
  * --------------------------------------------------------------------
