@@ -9,7 +9,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap" rel="stylesheet"> 	<title>Ci4 Blog</title>
 </head>
 <body>
-	<body>
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<div class="container">
 		<a class="navbar-brand" href="/">Ci4 Blog</a>
